@@ -63,9 +63,6 @@ sudo pacman -S debootstrap qemu-user-static qemu-user-static-binfmt debian-archi
 # Ubuntu / Debian
 sudo apt install debootstrap qemu-user-static binfmt-support
 
-# macOS (use Docker)
-# See docs/docker-build.md
-
 ```
 
 ---
