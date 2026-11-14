@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="/kindle-dropbox-banner.png" alt="Kindle Alpine Tailscale Drop-Box" width="100%">
+</p>
+
 # Kindle Alpine Tailscale Drop-Box (`kindle-alpine-dropbox`)
 
 Turn a jailbroken Kindle into a persistent, headless, autonomous Tailscale drop-box node running an isolated Alpine Linux chroot environment.
