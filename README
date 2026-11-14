@@ -1,0 +1,24 @@
+# Kindle Alpine Tailscale Drop-Box (`kindle-alpine-dropbox`)
+
+Turn a jailbroken Kindle into a persistent, headless, autonomous Tailscale drop-box node running an isolated Alpine Linux chroot environment. 
+
+## Overview
+
+This project allows you to run a lightweight Alpine Linux chroot container directly on a Kindle's user storage (`/mnt/us/`), leveraging Tailscale in userspace-networking mode (`--tun=userspace-networking`) to bypass kernel limitations. By managing power states via `lipc`, the device stays awake, keeps its Wi-Fi radio active, and maintains an un-interrupted connection to your tailnet indefinitely.
+
+## Features
+
+- **Isolated Chroot Environment:** Runs a full Alpine Linux container on top of an `alpine.ext3` virtual disk image.
+- **Userspace Networking:** Utilizes Tailscale's userspace networking engine, requiring no kernel tun/tap module modifications.
+- **Persistent State:** Retains node authentication and state inside the container image for seamless reconnections.
+- **Always-On Power Management:** Overrides Kindle power saving and screensaver timeouts to maintain a continuous Wi-Fi link.
+- **Zero Host Mutation:** Avoids messy system modifications; all runtime mounts occur dynamically in `/tmp`.
+
+---
+
+## Repository Structure
+
+```text
+├── alpine.ext3               # Base Alpine Linux virtual disk image (place in /mnt/us/)
+├── setup-dropbox.sh          # Bootstrap installer script for fresh environments
+└── start-alpine-dropbox.sh   # Runtime launcher script (mounts, binds, and starts Tailscale)
