@@ -33,7 +33,7 @@ if chroot /tmp/alpine tailscale status | grep -q "LoggedOut\|NeedsLogin\|Stopped
     echo "--------------------------------------------------------"
     echo ""
     # Run interactively so the login URL is printed directly to your terminal
-    chroot /tmp/alpine tailscale up --tun=userspace-networking
+    chroot /tmp/alpine tailscale up --ssh --tun=userspace-networking
 else
     echo "[*] Tailscale is already connected and active."
     chroot /tmp/alpine tailscale up --tun=userspace-networking >/dev/null 2>&1
