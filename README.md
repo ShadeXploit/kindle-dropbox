@@ -72,7 +72,7 @@ sudo apt install debootstrap qemu-user-static binfmt-support
 Clone your repository and run the build script on your workstation:
 
 ```bash
-sudo ./scripts/build_rootfs.sh
+sudo ./build-script.sh
 
 ```
 
