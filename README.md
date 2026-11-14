@@ -29,7 +29,7 @@ This project allows you to run a lightweight Alpine Linux chroot container direc
 
 ### On the Kindle
 
-* A jailbroken Kindle with KUAL, terminal access (`kterm`), and root SSH enabled.
+* A jailbroken Kindle with KUAL, terminal access (`kterm`), and root SSH enabled. Install with :kpm install jobman in the kindle search bar and enable ssh access
 * Basic familiarity with SSH and command-line file transfers (`sftp` or USB transfer).
 
 ### On Your Workstation (For Building the Image)
