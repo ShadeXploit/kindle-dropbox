@@ -107,7 +107,6 @@ You can use this command to get into the alpine shell will sshing in to the kind
 1. Enter the Alpine chroot environment:
    ```bash
    chroot /tmp/alpine /bin/sh
-   tailscale up 
 
 Follow the interactive auth URL provided in the console to authorize your Kindle node on your Tailscale admin console. Once authenticated, the state is permanently saved inside your `alpine.ext3` image.
 
