@@ -81,7 +81,9 @@ sh /mnt/us/start-alpine-dropbox.sh
 
 
 
-The script will automatically mount the virtual filesystem, bind essential devices (`/dev`, `/proc`, `/sys`), start `tailscaled` in the background, bring the interface up, and lock the screen active to prevent your Wi-Fi from dropping.
+The script will automatically mount the virtual filesystem, bind essential devices (`/dev`, `/proc`, `/sys`), start `tailscaled` in the background, bring the interface up, and lock the screen active to prevent your Wi-Fi from dropping. From there as long as it does not reboot you are good to go. you need to run the kindle-alpine-dropbox once everytime you start up. 
+
+If you want to clean up and remove everything run cleanup-dropbox.sh
 
 ---
 
