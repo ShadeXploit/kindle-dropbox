@@ -91,6 +91,13 @@ Run the startup script manually the first time to authenticate against your tail
 sh /mnt/us/start-alpine-dropbox.sh
 
 ```
+### Step 5: First-Time Tailscale Authentication
+Because Tailscale requires an interactive login link the first time it connects to your tailnet, do **not** run the background startup script yet. Instead, enter the container shell manually to authenticate:
+
+1. Enter the Alpine chroot environment:
+   ```bash
+   chroot /tmp/alpine /bin/sh
+   tailscale up 
 
 Follow the interactive auth URL provided in the console to authorize your Kindle node on your Tailscale admin console. Once authenticated, the state is permanently saved inside your `alpine.ext3` image.
 
