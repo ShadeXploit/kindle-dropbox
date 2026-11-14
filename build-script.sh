@@ -1,4 +1,12 @@
 #!/bin/bash
+# ==============================================================================
+# Title:        build_rootfs.sh
+# Description:  Multi-distro Kindle chroot image generator
+# Author:       Sqrilizz
+# Source:       https://github.com/Sqrilizz/kindle-linux-chroot
+# ==============================================================================
+
+#!/bin/bash
 set -e
 
 DISTRO=""
