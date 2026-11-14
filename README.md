@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/kindle-dropbox-banner.png" alt="Kindle Alpine Tailscale Drop-Box" width="100%">
+  <img src="/kindle-dropbox-banner.png">
 </p>
 
 # Kindle Alpine Tailscale Drop-Box (`kindle-alpine-dropbox`)
