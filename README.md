@@ -10,7 +10,7 @@ Turn a jailbroken Kindle into a persistent, headless, autonomous Tailscale drop-
 
 ## Overview
 
-This project allows you to run a lightweight Alpine Linux chroot container directly on a Kindle's user storage (`/mnt/us/`), leveraging Tailscale in userspace-networking mode (`--tun=userspace-networking`) to get around shitty kernel limitations. By managing power states via `lipc`, the device stays awake, keeps its Wi-Fi radio active, and maintains an uninterrupted connection to your tailnet indefinitely.
+This project allows you to run a lightweight Alpine Linux chroot container directly on a Kindle's user storage (`/mnt/us/`), leveraging Tailscale in userspace-networking mode (`--tun=userspace-networking`) to get around shitty kernel limitations. If for some reason the network you are trying to remote into is heavily locked down, Tailscale automatically falls back to routing encrypted traffic over **TCP port 443**, allowing your connection to blend in seamlessly with standard web traffic. By managing power states via `lipc`, the device stays awake, keeps its Wi-Fi radio active, and maintains an uninterrupted connection to your tailnet indefinitely.
 
 ## Why a Kindle Drop-Box?
 
@@ -87,7 +87,7 @@ sudo ./build-script.sh
 
 Copy your generated `alpine.ext3` image along with `setup-dropbox.sh`, `start-alpine-dropbox.sh`, and `cleanup-dropbox.sh` into the root of your Kindle's user storage (`/mnt/us/`) via USB or SFTP.
 
-### Step 3: Run the Bootstrap Installer
+### Step 3: Run the Bootstrap Installer (First Run Only)
 
 SSH into your Kindle and execute the setup script to install runtime dependencies (`tailscale`, `bash`, `curl`) inside the chroot:
 
@@ -96,7 +96,7 @@ sh /mnt/us/setup-dropbox.sh
 
 ```
 
-### Step 4: Authenticate Tailscale (First Run Only)
+### Step 4: Setup 
 
 Run the startup script manually the first time to authenticate against your tailnet:
 
@@ -104,8 +104,8 @@ Run the startup script manually the first time to authenticate against your tail
 sh /mnt/us/start-alpine-dropbox.sh
 
 ```
-### Step 5: First-Time Tailscale Authentication
-Because Tailscale requires an interactive login link the first time it connects to your tailnet, do **not** run the background startup script yet. Instead, enter the container shell manually to authenticate:
+### Step 5: First-Time Tailscale Authentication / Getting A Shell
+You can use this command to get into the alpine shell will sshing in to the kindle. This is useful for troubleshooting and authenticating the device to your tailnet.
 
 1. Enter the Alpine chroot environment:
    ```bash
