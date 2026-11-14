@@ -12,7 +12,12 @@ Turn a jailbroken Kindle into a persistent, headless, autonomous Tailscale drop-
 
 This project allows you to run a lightweight Alpine Linux chroot container directly on a Kindle's user storage (`/mnt/us/`), leveraging Tailscale in userspace-networking mode (`--tun=userspace-networking`) to get around shitty kernel limitations. By managing power states via `lipc`, the device stays awake, keeps its Wi-Fi radio active, and maintains an uninterrupted connection to your tailnet indefinitely.
 
-This is really the perfect device for a wireless dropbox since you have the benefits of a screen (to type the wifi password in) and a great battery life along with it. The use case for this is endless. You could connect to the wifi and "forget" your device to remote back in later and scan the network and pivot. I wanted to build this since sometimes its easier to get the password on a site then it is to find a RJ45 port (for my other pi dropboxes). Once connected you could hide this thing just about anywhere, even if someone found its just a kindle. Most people would just put this in the lost in found so if it was found (make sure there is one first) so you can retrieve it later. 
+## Why a Kindle Drop-Box?
+
+This project turns a standard e-reader into an ideal wireless drop-box platform. Compared to traditional headless Pi drop-boxes, a Kindle offers distinct advantages:
+- **Built-in Screen:** Easily type Wi-Fi passwords on-device or navigate captive portals without needing a serial cable or pre-configured headless tether.
+- **Form Factor & Battery Life:** Long battery life and an innocent physical appearance. If left on-site during an authorized assessment, a Kindle blends in seamlessly as a personal device left behind, making it far less suspicious than a bare circuit board or a flashing Raspberry Pi.
+- **Operational Utility:** Once connected to Wi-Fi, you can drop the device on-site, disconnect physically, and pivot back in remotely via Tailscale to perform internal network reconnaissance and enumeration.
 
 ## Features
 
@@ -144,6 +149,12 @@ sh /mnt/us/cleanup-dropbox.sh
 ```
 
 ---
+
+## Developer's Note & Motivation
+
+I had an incredible amount of fun building this project from scratch. As far as my deep dives and Google searches could tell, **nobody has really done this before.** 
+
+Taking an e-reader completely out of its intended context—bypassing kernel limits with userspace networking, setting up an isolated Alpine container, and turning it into an invisible, remote-accessible network made me learn way more then I wanted about kindles lol, but seeing it come together into a functional drop-box that sits in plain sight was awesome. I am genuinely proud of how this turned out. If anyone actually uses this for an engagement please let me know, I would love to hear how it worked in the field!
 
 ## Credits & Acknowledgements
 
