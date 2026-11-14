@@ -45,7 +45,7 @@ Copy your pre-built `alpine.ext3` image, `setup-dropbox.sh`, and `start-alpine-d
 SSH into your Kindle and execute the setup script to install runtime dependencies (`tailscale`, `bash`, `curl`) inside the chroot:
 
 ```bash
-sh /mnt/us/setup-dropbox.sh
+sh setup-dropbox.sh
 
 ```
 
@@ -54,7 +54,7 @@ sh /mnt/us/setup-dropbox.sh
 If you haven't baked an existing Tailscale state into your image, run the startup script manually the first time to authenticate against your tailnet:
 
 ```bash
-sh /mnt/us/start-alpine-dropbox.sh
+sh start-alpine-dropbox.sh
 
 ```
 
@@ -75,7 +75,7 @@ ssh root@<YOUR_KINDLE_IP>
 
 2. Execute the launcher script:
 ```bash
-sh /mnt/us/start-alpine-dropbox.sh
+sh start-alpine-dropbox.sh
 
 ```
 
