@@ -1,6 +1,3 @@
----
-
-```markdown
 # Kindle Alpine Tailscale Drop-Box (`kindle-alpine-dropbox`)
 
 Turn a jailbroken Kindle into a persistent, headless, autonomous Tailscale drop-box node running an isolated Alpine Linux chroot environment. 
