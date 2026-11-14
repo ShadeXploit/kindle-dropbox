@@ -10,7 +10,7 @@ Turn a jailbroken Kindle into a persistent, headless, autonomous Tailscale drop-
 
 ## Overview
 
-This project allows you to run a lightweight Alpine Linux chroot container directly on a Kindle's user storage (`/mnt/us/`), leveraging Tailscale in userspace-networking mode (`--tun=userspace-networking`) to bypass kernel limitations. By managing power states via `lipc`, the device stays awake, keeps its Wi-Fi radio active, and maintains an uninterrupted connection to your tailnet indefinitely.
+This project allows you to run a lightweight Alpine Linux chroot container directly on a Kindle's user storage (`/mnt/us/`), leveraging Tailscale in userspace-networking mode (`--tun=userspace-networking`) to get around shitty kernel limitations. By managing power states via `lipc`, the device stays awake, keeps its Wi-Fi radio active, and maintains an uninterrupted connection to your tailnet indefinitely.
 
 This is really the perfect device for a wireless dropbox since you have the benefits of a screen (to type the wifi password in) and a great battery life along with it. The use case for this is endless. You could connect to the wifi and "forget" your device to remote back in later and scan the network and pivot. I wanted to build this since sometimes its easier to get the password on a site then it is to find a RJ45 port (for my other pi dropboxes). Once connected you could hide this thing just about anywhere, even if someone found its just a kindle. Most people would just put this in the lost in found so if it was found (make sure there is one first) so you can retrieve it later. 
 
