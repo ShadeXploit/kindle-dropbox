@@ -123,10 +123,24 @@ sh /mnt/us/cleanup-dropbox.sh
 
 ```
 
+---
+
+## Credits & Acknowledgements
+
+- **Chroot Build Script:** Adapted from [kindle-linux-chroot](https://github.com/Sqrilizz/kindle-linux-chroot) by **[Sqrilizz](https://github.com/Sqrilizz)**.
+- **Kindle Tooling:** 
+  - KUAL by **knc1**
+  - kterm by **bfabiszewski**
+- **Community:** The Kindle jailbreak community at MobileRead & Dammit Jeff.
+
+## Contributing
+
+PRs welcome! 
+
+**Automation Notes:**
+- CI (`.github/workflows/ci.yml`) runs `shell shellcheck` plus full smoke builds of Debian, Alpine, Void, and a resize-tool test on every push.
+- If your shell script changes, run `shellcheck` locally first—CI is strict.
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-```
-
-```
