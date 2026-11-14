@@ -2,7 +2,7 @@
   <img src="./kindle-dropbox-banner.png" alt="Kindle Alpine Tailscale Drop-Box" width="100%">
 </p>
 
-### AUTHORIZED USE ONLY - DONT BE A DICKHEAD
+### AUTHORIZED USE ONLY - DONT BE A D*******
 
 # Kindle Alpine Tailscale Drop-Box (`kindle-alpine-dropbox`)
 
