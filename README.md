@@ -150,7 +150,7 @@ sh /mnt/us/cleanup-dropbox.sh
 
 I had an incredible amount of fun building this project from scratch. As far as my deep dives and Google searches could tell, **nobody has really done this before.** 
 
-Taking an e-reader completely out of its intended context bypassing kernel limits with userspace networking, setting up an isolated Alpine container, and turning it into an invisible, remote-accessible network made me learn way more then I wanted about kindles lol, but seeing it come together into a functional drop-box that sits in plain sight was awesome. I am genuinely proud of how this turned out. If anyone actually uses this for an engagement please let me know, I would love to hear how it worked in the field!
+Taking an e-reader completely out of its intended context bypassing kernel limits with userspace networking, setting up an isolated Alpine container, and turning it into an invisible, remote-accessible network made me learn way more then I wanted to about kindles lol, but seeing it come together into a functional drop-box that sits in plain sight was awesome. I am genuinely proud of how this turned out. If anyone actually uses this for an engagement please let me know, I would love to hear how it worked in the field!
 
 ## Credits & Acknowledgements
 
